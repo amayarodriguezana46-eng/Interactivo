@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="confetti.css">
+  <style>
+    #header {
+      background-color: #74e651;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    .nav {
+      padding-right: 20px;
+    }
+
+    .nav ul li{
+      display:inline;
+      padding:0 10px
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+      margin: 8px;
+    }
+    #seccion {
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap
+    }
+
+    .barra {
+      padding: 10px;
+      margin:5px;
+      background: aqua;
+      flex:3;
+      border-radius:10px;
+      display:flex;
+      flex-flow:column;
+      align-items:center;
+    }
+
+    .contenido {
+      padding: 10px;
+      border-radius:10px;
+      background: rgb(251,241,100);
+      margin:5px;
+      flex:1 150px;
+    }
+
+    .subcontenido2 {
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    #resultado {
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      align-items: center;
+    }
+    
+    #footer {
+      background-color: white;
+      height: 100%;
+      text-align: center;
+      padding-top: 10px;
+      border-radius: 10px;
+      display:flex;
+      flex-flow:row;
+    }
+    .pie {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    #galeria{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap; 
+      height:100px;
+    }
+
+    .proyecto{
+      
+      height:150px;
+      max-width:150px;
+      background-color:rgb(255, 255, 255);
+      border-radius:10px;
+      margin:10px;
+      flex:1 100px;
+    }
+
+    .barra a {
+      display:block;
+    }
+    #imagen-interactiva {
+      position: relative;
+      width: 500px;
+      height: 600px;
+      background-image: url('Imagenes/Pulpo.png.png');
+      background-size: cover;
+      border: 2px solid #000;
+      border-radius: 10px;
+    }
+    .texto-rojo{
+      font-size:40px;
+      font-weight: bold;
+      color:red;
+    }
+    #fiesta{
+      position:absolute;
+    }
+    #boton-reintentar{
+      width: 150px;
+      height: 50px;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    #hotspot1 {
+      position: absolute;
+      top: 255px;
+      left: 280px;
+      width: 40px;
+      height: 40px;
+      background-color:  rgba(158, 161, 179, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    #hotspot2 {
+      position: absolute;
+      top: 135px; 
+      left: 350px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(158, 161, 179, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #hotspot3 {
+      position: absolute;
+      top: 280px; 
+      left: 35px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(158, 161, 179, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #hotspot4 {
+      position: absolute;
+      top: 50px; 
+      left: 360px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(158, 161, 179, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #hotspot5 {
+      position: absolute;
+      top: 115px; 
+      left: 270px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(158, 161, 179, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .text-hotspot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+    }
+
+    #instrucciones {
+      flex:1;
+      cursor: pointer;
+    }
+
+    #prueba {
+      flex:1;
+      cursor:pointer;
+    }
+
+    .texto-rojo{
+            font-size:40px;
+            font-weight: bold;
+            color:red;
+    }
+  </style>
+</head>
+<body>
+    <div id="fiesta" class="invisible">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div id="box-win">
+    </div>
+    <div id="header">
+    <div class="nav" style="text-align:center;">
+      <h3>Bienvenido a "Conociendo a los pulpos"</h3>
+    </div>
+  </div>
+  <div id="seccion">
+    <div class="barra">
+        <div id="imagen-interactiva">
+          <div id="hotspot1"><span class="text-hotspot">1</span></div>
+          <div id="hotspot2"><span class="text-hotspot">2</span></div>
+          <div id="hotspot3"><span class="text-hotspot">3</span></div>
+          <div id="hotspot4"><span class="text-hotspot">4</span></div>
+          <div id="hotspot5"><span class="text-hotspot">5</span></div>
+        </div>
+    </div>
+    <div class="contenido">
+      <div class="subcontenido1">
+        <h2 id="titulo-info">Instrucciones</h2>
+        <p id="texto-info">Haz click en cada uno de los puntos de la imagen para ver su descripción. Una vez visualizado el interactivo, realiza el test de conocimientos.</p>
+      </div>
+      <div class="subcontenido2">
+        <div class="proyecto">
+          <img id="imagen-info" src="Imagenes/hotspot-cursor.png" alt="Imagen info" style="width:100%; height:100%; border-radius:10px;">
+        </div>
+      </div>
+      <div id="resultado" class="invisible">
+        <h2>Tu resultado:</h2>
+        <span id="calif" class="texto-rojo">0/0</span>
+        <img id="imagen-resultado" width="200px" src="Imagenes/ping.gif" />
+        <div id="boton-reintentar" class="invisible">Reintentar</div>
+      </div>      
+    </div>
+  </div>
+  <div id="footer">
+    <div id="instrucciones"><img width="100px" src="Imagenes/instrucciones.png" /></div>
+    <div id="prueba"><img width="100px" src="Imagenes/test.png" /></div>
+  </div>
+  <script type="text/javascript">
+    let puntaje = 0;
+    let pregunta1 = "";
+    document.getElementById("boton-reintentar").onclick = function() {
+                window.location.reload();
+            };
+
+    document.getElementById('hotspot1').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Corazón';
+      document.getElementById('texto-info').textContent = 'Este es uno de sus corazones. En total son 3 corazones funcionales, dos de ellos transportan sangre a sus branquias, mientras que el tercero bombea sangre al resto de su cuerpo.';
+      document.getElementById('imagen-info').setAttribute('src', 'Imagenes/Corazon.png');    
+    };
+
+    document.getElementById('hotspot2').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Ojo';
+      document.getElementById('texto-info').textContent = 'Los ojos del pulpo son daltónicos, es decir, solo pueden ver en escala de grises.';
+      document.getElementById('imagen-info').setAttribute('src', 'Imagenes/Ojos.png');
+    };
+
+    document.getElementById('hotspot3').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Tentaculo';
+      document.getElementById('texto-info').textContent = 'Este es uno de sus tentáculo. Los tentáculos de los pulpos son extremadamente flexibles y fuertes.';
+      document.getElementById('imagen-info').setAttribute('src', 'Imagenes/Tentaculos.png');
+    };
+    
+    document.getElementById('hotspot4').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Cerebro';
+      document.getElementById('texto-info').textContent = 'El cerebro del pulpo es extraordinario y se caracteriza por estar distribuido por todo el cuerpo, otorgándole una inteligencia excepcional para un invertebrado.';
+      document.getElementById('imagen-info').setAttribute('src', 'Imagenes/Cerebro.png');
+    };
+
+    document.getElementById('hotspot5').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Colores';
+      document.getElementById('texto-info').textContent = 'Los pulpos no tienen un solo color, sino que varían entre marrón, gris, amarillo y otros tonos.';
+      document.getElementById('imagen-info').setAttribute('src', 'Imagenes/Colores.png');
+    };
+
+
+    document.getElementById('instrucciones').onclick = function(){
+      document.getElementById('titulo-info').textContent = 'Instrucciones';
+      document.getElementById('texto-info').textContent = 'Haz click en cada uno de los puntos de la imagen para ver su descripción. Una vez visualizado el interactivo, realiza el test de conocimientos.';
+      document.getElementById('imagen-info').setAttribute('src', 'Images/hotspot-cursor.png');
+    };
+
+    document.getElementById('prueba').onclick = function(){
+      alert("Bienvenidos a la prueba de conocimientos");
+      alert("Responde correctamente todas las preguntas para ganar");
+
+        if (pregunta1 = prompt("¿Cuántos tentáculos tiene un pulpo?")) {
+            pregunta1 = pregunta1.trim();
+        }
+        if (pregunta1 === "8") {
+            alert("¡Correcto! Un pulpo tiene 8 tentáculos.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Un pulpo tiene 8 tentáculos.");
+        }
+        if (pregunta2 = prompt("¿Cuántos corazones tiene un pulpo?")) {
+            pregunta2 = pregunta2.trim();
+        }
+        if (pregunta2 === "3") {
+            alert("¡Correcto! Un pulpo tiene 3 corazones.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Un pulpo tiene 3 corazones.");
+        }
+        if (pregunta3 = prompt("¿Dónde viven los pulpos?")) {
+            pregunta3 = pregunta3.trim();
+        }
+        if (pregunta3 === "Fondo marino") {
+            alert("¡Correcto! Viven en el fondo marino.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Los pulpos viven en el fondo marino.");
+        }
+        if (pregunta4 = prompt("¿Qué comen los pulpos?")) {
+            pregunta4 = pregunta4.trim();
+        }
+        if (pregunta4 === "Cangrejos, camarones y peces") {
+            alert("¡Correcto! Los pulpos son carnívoros y comen cangrejos, camarones y peces.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Los pulpos son carnívoros y por lo tanto comen cangrejos, camarones y peces.");
+        }
+        if (pregunta5 = prompt("¿Cuánto tiempo viven los pulpos?")) {
+            pregunta5 = pregunta5.trim();
+        }
+        if (pregunta5 === "Entre 1 y 3 años") {
+            alert("¡Correcto! Los pulpos pueden vivir entre 1 y 3 años.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Los pulpos pueden vivir ente 1 y 3 años");
+        }
+        if (pregunta6 = prompt("¿Son peligrosos los pulpos?")) {
+            pregunta6 = pregunta6.trim();
+        }
+        if (pregunta6 === "No") {
+            alert("¡Correcto! Los pulpos normalmente no son peligrosos.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Los pulpos no son peligroso");
+        }
+         if (pregunta7 = prompt("¿Cómo se mueve un pulpo?")) {
+            pregunta7 = pregunta7.trim();
+        }
+        if (pregunta7 === "Propulsión a chorro") {
+            alert("¡Correcto! Los pulpos se mueven mediante mediante propulsión a chorro.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Los pulpos se mueven mediante mediante propulsión a chorro.");
+        }
+        if (pregunta8 = prompt("¿Por qué los pulpos tienen tanta flexibilidad?")) {
+            pregunta8 = pregunta8.trim();
+        }
+        if (pregunta8 === "Tienen un cuerpo blando") {
+            alert("¡Correcto! Los pulpos tienen un cuerpo completamente blando.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. Los pulpos tienen un cuerpo completamente blando.");
+        }
+        if (pregunta9 = prompt("¿Qué tan grandes pueden llegar a ser los pulpos?")) {
+            pregunta9 = pregunta9.trim();
+        }
+        if (pregunta9 === "Hasta 9m de largo") {
+            alert("¡Correcto! Los pulpos pueden llegar a medir hasta 9 metros.");
+            puntaje += 1;
+        } else {
+        alert("Incorrecto. Los pulpos pueden medir hasta 9m.");
+        }
+        if (pregunta10 = prompt("¿Qué color de sangre tienen los pulpos?")) {
+            pregunta9 = pregunta10.trim();
+        }
+        if (pregunta10 === "Sangre azul") {
+            alert("¡Correcto! Los pulpos tienen sangre azul.");
+            puntaje += 1;
+        } else {
+        alert("Incorrecto. Los pulpos tienen sangre azul debido a la proteína llamada hemocianina.");
+        }
+
+         if(puntaje >=10) {
+            alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
+            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("resultado").setAttribute("class", "visible");
+            
+        } else {
+            alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
+            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("resultado").setAttribute("class", "visible");
+            document.getElementById("imagen-resultado").setAttribute("src", "Img/triste.gif");
+        }
+    }
+        </script>
+</body>
+</html>
+
