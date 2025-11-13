@@ -423,8 +423,8 @@
 
     let pregunta14 = prompt("¿Cómo se llaman los ojos de un pulpo?");
       pregunta14 = pregunta14.trim();
-   if (pregunta14 === "Ojos complejos") {
-    alert("¡Correcto! Los pulpos tienen ojos complejos.");
+   if (pregunta14 === "Ojos de Cefalópodo") {
+    alert("¡Correcto! Los pulpos tienen ojos de Cefalópodo(evolución convergente).");
     puntaje += 1;
 } else {
     alert("Incorrecto. Los pulpos tienen ojos complejos.");
@@ -442,12 +442,12 @@
 
          if(puntaje >=15) {
             alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
-            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
             
         } else {
             alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
-            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
             document.getElementById("imagen-resultado").setAttribute("src", "Imagenes/triste.gif");
         }
@@ -455,6 +455,7 @@
         </script>
 </body>
 </html>
+
 
 
 
