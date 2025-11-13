@@ -393,8 +393,54 @@
         } else {
         alert("Incorrecto. Los pulpos tienen sangre azul debido a la proteína llamada hemocianina.");
         }
+        let pregunta11 = prompt("¿Cuántos tentáculos tiene un pulpo que ha perdido uno?");
+        pregunta11 = pregunta11.trim();
+       if (pregunta11 === "7") {
+        alert("¡Correcto! Un pulpo que pierde un tentáculo tiene 7.");
+        puntaje += 1;
+     } else {
+    alert("Incorrecto. Un pulpo que pierde un tentáculo tiene 7.");
+}
 
-         if(puntaje >=10) {
+
+    let pregunta12 = prompt("¿Qué mecanismo utilizan los pulpos para defenderse de los depredadores?");
+       pregunta12 = pregunta12.trim();
+   if (pregunta12 === "Expulsan tinta") {
+    alert("¡Correcto! Los pulpos expulsan tinta para defenderse.");
+    puntaje += 1;
+      } else {
+    alert("Incorrecto. Los pulpos expulsan tinta para defenderse.");
+}
+
+    let pregunta13 = prompt("¿Qué tipo de animales tienen los pulpos como principales enemigos naturales?");
+    pregunta13 = pregunta13.trim();
+  if (pregunta13 === "Tiburones y peces grandes") {
+    alert("¡Correcto! Los pulpos son presa de tiburones y peces grandes.");
+    puntaje += 1;
+} else {
+    alert("Incorrecto. Los pulpos son presa de tiburones y peces grandes.");
+}
+
+    let pregunta14 = prompt("¿Cómo se llaman los ojos de un pulpo?");
+      pregunta14 = pregunta14.trim();
+   if (pregunta14 === "Ojos complejos") {
+    alert("¡Correcto! Los pulpos tienen ojos complejos.");
+    puntaje += 1;
+} else {
+    alert("Incorrecto. Los pulpos tienen ojos complejos.");
+}
+
+
+   let pregunta15 = prompt("¿Pueden los pulpos cambiar el color de su piel?");
+     pregunta15 = pregunta15.trim();
+   if (pregunta15 === "Sí, pueden cambiar de color y textura") {
+    alert("¡Correcto! Los pulpos pueden cambiar de color y textura para camuflarse.");
+    puntaje += 1;
+} else {
+    alert("Incorrecto. Los pulpos pueden cambiar de color y textura para camuflarse.");
+}
+
+         if(puntaje >=15) {
             alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
             document.getElementById("calif").textContent = puntaje + "/10";
             document.getElementById("resultado").setAttribute("class", "visible");
