@@ -249,7 +249,13 @@
         <img id="imagen-resultado" width="200px" src="Imagenes/ping.gif" />
         <div id="boton-reintentar" class="invisible">Reintentar</div>
       </div>      
-    </div>
+     </div>
+<a href="formulario.php" id="button"
+   style="display: none; padding: 15px 30px; background: linear-gradient(135deg, #00ff00 0%, #00cc00 100%); 
+   color: black; text-decoration: none; border-radius: 10px; font-size: 20px; font-weight: bold; 
+   box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);">
+    💬 Dejar un Comentario
+</a>
   </div>
   <div id="footer">
     <div id="instrucciones"><img width="100px" src="Imagenes/instrucciones.png" /></div>
@@ -445,12 +451,14 @@
             alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
             document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
+             document.getElementById("button").style.display = "inline-block";
             
         } else {
             alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
             document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
             document.getElementById("imagen-resultado").setAttribute("src", "Imagenes/triste.gif");
+             document.getElementById("button").style.display = "inline-block";
         }
     }
         </script>
