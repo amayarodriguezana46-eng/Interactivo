@@ -110,7 +110,6 @@
         echo "Error: No se pudo conectar a MySQL.";
         exit;
     }
-    
     echo "Estado: Conexión establecida (Host: " . mysqli_get_host_info($conexion) . ")";
     ?>
     </div>
@@ -138,7 +137,7 @@
     </div>
 
     <a href="formulario.php" class="nav-btn"> Escribir Comentario</a>
-    <a href="IntePulpoMejor.html" style="display:block; text-align:center; color: #00ff00; margin-top: 10px;">← Volver al interactivo</a>
+    <a href="index.html" style="display:block; text-align:center; color: #00ff00; margin-top: 10px;">← Volver al interactivo</a>
 
 </body>
 </html>
