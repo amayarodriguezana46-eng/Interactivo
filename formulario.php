@@ -91,7 +91,7 @@ button:hover {
     <div class="form-container">
         <h2>Tu Opinión</h2>
         <form action="procesar.php" method="POST">
-            <label for="nombre">Nombre o Nickname:</label>
+            <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Ej: Conocedor">
 
             <label for="comentario">Comentario:</label>
@@ -99,7 +99,7 @@ button:hover {
 
             <button type="submit">Enviar Comentario</button>
         </form>
-        <a href="index.html" class="back-link">← Volver al interectavo</a>
+        <a href="IntePulpoMejor.html" class="back-link">← Volver al interectavo</a>
     </div>
 </body>
 </html>
