@@ -138,7 +138,7 @@
     </div>
 
     <a href="formulario.php" class="nav-btn"> Escribir Comentario</a>
-    <a href="index.html" style="display:block; text-align:center; color: #00ff00; margin-top: 10px;">← Volver al interactivo</a>
+    <a href="IntePulpoMejor.html" style="display:block; text-align:center; color: #00ff00; margin-top: 10px;">← Volver al interactivo</a>
 
 </body>
 </html>
