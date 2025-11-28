@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias!</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #001f3f 0%, #003566 30%, #0a9396 60%, #94d2bd 100%);
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        color: #5dade2;
+        font-size: 4em;
+        text-shadow: 0 0 25px #5dade2;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+        color: #e0f7fa;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        font-size: 18px;
+        display: inline-block;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-green {
+        background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+        box-shadow: 0 0 20px rgba(52, 152, 219, 0.6);
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 2px solid #85c1e9;
+        color: #85c1e9;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px rgba(133, 193, 233, 0.9);
+    }
+</style>
+
+</head>
+<body>
+    <h1>¡Gracias!</h1>
+    <p>Tu comentario ha sido registrado con éxito.</p>
+    
+    <div>
+        <a href="listado.php" class="btn btn-green">Ver Comentarios</a>
+        <a href="index.html" class="btn btn-outline">Volver al interactivo</a>
+    </div>
+</body>
+</html>
