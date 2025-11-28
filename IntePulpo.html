@@ -247,17 +247,7 @@
         <h2>Tu resultado:</h2>
         <span id="calif" class="texto-rojo">0/0</span>
         <img id="imagen-resultado" width="200px" src="Imagenes/ping.gif" />
-
-        <a href="formulario.php" id="button"
-             style="display: none; padding: 15px 30px; 
-   background: linear-gradient(135deg, #5dade2 0%, #3498db 100%); 
-   color: white; text-decoration: none; border-radius: 10px; 
-   font-size: 20px; font-weight: bold; 
-   box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
-   margin-top: 15px;">
-            💬 Dejar un Comentario
-        </a>
-
+        </div>
         <div id="boton-reintentar" class="invisible">Reintentar</div>
       </div> 
   <div id="footer">
@@ -454,13 +444,11 @@
             alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
             document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
-             document.getElementById("button").style.display = "inline-block";
         } else {
             alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
             document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
             document.getElementById("imagen-resultado").setAttribute("src", "Imagenes/triste.gif");
-             document.getElementById("button").style.display = "inline-block";
         }
     }
         </script>
