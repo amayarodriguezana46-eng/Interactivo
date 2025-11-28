@@ -99,7 +99,7 @@ button:hover {
 
             <button type="submit">Enviar Comentario</button>
         </form>
-        <a href="IntePulpoMejor.html" class="back-link">← Volver al interectavo</a>
+        <a href="index.html" class="back-link">← Volver al interectavo</a>
     </div>
 </body>
 </html>
